@@ -25,10 +25,8 @@ export async function PATCH(req:NextRequest){
     const reqBody=await req.json()
     const {isPending,id}:{isPending:Boolean,id:String}=reqBody
 
-    
-    
-    // await Task.updateOne
-    return NextResponse.json({message:'status chamged'})
+    await Task.findByIdAndUpdate(id,{isPending:isPending})
+    return NextResponse.json({message:'status changed'})
   } catch (error) {
       return NextResponse.json({error:error},{status:401})
   }

@@ -12,12 +12,12 @@ const userSchema=new mongoose.Schema({
       required:[true, 'Please enter description'],
     }, 
    createdAt:{
-    type:Date,
+    type:String,
 
    },
    isPending:{
-    type:String,
-    required:true
+    type:Boolean,
+    default:true
    }
 })
 

@@ -6,17 +6,20 @@ import Card from "../../components/shared/Card";
 export default function home() {
 
   const [dataArray, setDataArray] = useState([
-    { _id: "", title: "", description: "", createdAt: "", isPending: true },
+    { _id: "", title: "", description: "", createdAt: "", isPending: false },
   ]);
   const [loading, setLoading] = useState(true);
+
+  useEffect(()=>{
+
+  })
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get("/api/home");
         const datajson = response.data; //array
-        setDataArray((prev) => datajson);
-        console.log(dataArray);
+        setDataArray(() => datajson);
         // console.log(datajson);
       } catch (error) {
         console.error(error);
@@ -26,7 +29,8 @@ export default function home() {
     };
     fetchData();
   }, []);
-
+  
+  // console.log(dataArray);
   return (
     
     <main className="py-14   relative">
@@ -48,6 +52,7 @@ export default function home() {
                 title={task.title}
                 description={task.description}
                 createdAt={task.createdAt}
+                isPending={task.isPending}
               />
             );
           })}

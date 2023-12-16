@@ -29,18 +29,40 @@ export default function Card(){
   } 
   
   return(
-    <form> 
-      <label>Title</label>
-      <input 
-        name="title"
-        type="text"
-        placeholder="Work Title"
+    <form className='max-w-md mx-auto mt-8 p-8 bg-white rounded-md shadow-md'>
+    <h2 className='text-2xl text-blue-500 font-bold mb-6'>Add Work</h2>
+  
+    <div className='mb-4'>
+      <label htmlFor='title' className='block text-gray-700 text-sm font-semibold mb-2'>Title</label>
+      <input
+        id='title'
+        name='title'
+        type='text'
+        placeholder='Enter Work Title'
         onChange={handleChange}
-        />
-        <label>Description</label>
-        <textarea name="description" rows={4} cols={50} onChange={handleChange}></textarea>
-        
-        <button className="bg-white p-2 text-black" type='button' onClick={handleSubmit}>submit</button>
-    </form>
+        className='w-full p-2 border text-gray-700 border-gray-300 rounded-md'
+      />
+    </div>
+  
+    <div className='mb-4'>
+      <label htmlFor='description' className='block text-sm text-gray-700 font-semibold mb-2'>Description</label>
+      <textarea
+        id='description'
+        name='description'
+        rows={4}
+        placeholder='Enter Work Description'
+        onChange={handleChange}
+        className='w-full p-2 border border-gray-300 rounded-md resize-none'
+      ></textarea>
+    </div>
+  
+    <button
+      className='w-full bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded'
+      type='button'
+      onClick={handleSubmit}
+    >
+      Submit
+    </button>
+  </form>
   )
 }

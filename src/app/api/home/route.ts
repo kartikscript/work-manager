@@ -31,3 +31,15 @@ export async function PATCH(req:NextRequest){
       return NextResponse.json({error:error},{status:401})
   }
 }
+
+export async function POST(req:NextRequest){
+  try {
+    const reqBody=await req.json()
+    const {id}:{id:String}=reqBody
+    await Task.findByIdAndDelete(id)
+    return NextResponse.json({message:'Deleted'})
+
+  } catch (error) {
+    return NextResponse.json({error:error},{status:401})
+  }
+}

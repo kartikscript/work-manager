@@ -6,7 +6,7 @@ connect();
 type obj = {
   title: String;
   description: String;
-  createdAt: String;
+  createdAt: Date;
 };
 export async function POST(req: NextRequest) {
   try {

@@ -52,7 +52,7 @@ export default function Card(){
         rows={4}
         placeholder='Enter Work Description'
         onChange={handleChange}
-        className='w-full p-2 border border-gray-300 rounded-md resize-none'
+        className='w-full p-2 border text-gray-700 border-gray-300 rounded-md resize-none'
       ></textarea>
     </div>
   

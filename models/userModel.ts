@@ -12,7 +12,7 @@ const userSchema=new mongoose.Schema({
       required:[true, 'Please enter description'],
     }, 
    createdAt:{
-    type:String,
+    type:Date,
 
    },
    isPending:{

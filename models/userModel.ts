@@ -18,7 +18,8 @@ const userSchema=new mongoose.Schema({
    isPending:{
     type:Boolean,
     default:true
-   }
+   },
+   
 })
 
 const Task= mongoose.models.tasks || mongoose.model('tasks',userSchema)

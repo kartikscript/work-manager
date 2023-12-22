@@ -2,7 +2,6 @@ import { connect } from "@/dbConfig/dbConfig";
 import { NextRequest, NextResponse } from "next/server";
 import Task from "../../../../models/userModel";
 
-connect();
 type obj = {
   title: String;
   description: String;
@@ -19,6 +18,7 @@ export async function POST(req: NextRequest) {
       createdAt,
       isPending:true
     });
+await connect();
 
     await newTask.save();
 

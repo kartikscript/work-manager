@@ -5,12 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@clerk/clerk-react':
+    specifier: ^4.30.0
+    version: 4.30.0(react@18.2.0)
   '@clerk/nextjs':
     specifier: ^4.28.1
     version: 4.28.1(next@14.0.2)(react-dom@18.2.0)(react@18.2.0)
   axios:
     specifier: ^1.6.2
     version: 1.6.2
+  clerk-react:
+    specifier: ^0.1.9
+    version: 0.1.9(react@18.2.0)
   mongodb:
     specifier: ^6.3.0
     version: 6.3.0
@@ -590,6 +596,15 @@ packages:
       fsevents: 2.3.3
     dev: true
 
+  /clerk-react@0.1.9(react@18.2.0):
+    resolution: {integrity: sha512-xM0vRSW+aiUO9CklWTEaFO9SQL+rJs1hOPMvTibJFSFktYSJmUFxdSZTv6eUF10LthpQcitMnoQSX7oHAyQokw==}
+    peerDependencies:
+      react: ^16.8.0
+    dependencies:
+      core-js: 3.34.0
+      react: 18.2.0
+    dev: false
+
   /client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
     dev: false
@@ -613,6 +628,11 @@ packages:
   /cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /core-js@3.34.0:
+    resolution: {integrity: sha512-aDdvlDder8QmY91H88GzNi9EtQi2TjvQhpCX6B1v/dAZHU1AuLgHvRh54RiOerpEhEW46Tkf+vgAViB/CWC0ag==}
+    requiresBuild: true
     dev: false
 
   /cssesc@3.0.0:

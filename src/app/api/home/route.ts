@@ -2,12 +2,12 @@ import { connect } from "@/dbConfig/dbConfig";
 import { NextRequest, NextResponse } from "next/server";
 import Task from "../../../../models/userModel";
 
-connect()
 
 export async function GET(req:NextRequest){
-
+  
   try {
     
+    await connect()
     const data =await Task.find()
 
     return NextResponse.json(data)

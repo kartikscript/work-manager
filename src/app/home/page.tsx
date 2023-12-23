@@ -3,10 +3,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "../../components/shared/Card";
 import Link from "next/link";
-import { useUser } from "@clerk/clerk-react";
 
 export default function Home() {
-  // const user = useUser();
   const [dataArray, setDataArray] = useState([
     { _id: "", title: "", description: "", createdAt: Date.now(), isPending: false },
   ]);

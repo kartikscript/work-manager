@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 import { useState } from "react"
 
 export default function Card(){
-  const router=useRouter()
+  // const router=useRouter()
   const [data, setData] =useState({title:'',description:'',createdAt:Date.now()})
 
   const handleChange=(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> )=>{
@@ -22,7 +22,7 @@ export default function Card(){
       const response = await axios.post("/api/addwork", data);
       console.log("task added!!");
       
-     router.push('/home')
+    //  router.push('/home')
     } catch (error) {
         console.log(error)
     }

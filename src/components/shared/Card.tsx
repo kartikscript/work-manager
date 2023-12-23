@@ -1,6 +1,5 @@
 'use client'
 import axios from 'axios'
-import Error from 'next/error';
 import {useEffect, useState} from 'react'
 
 
@@ -34,7 +33,7 @@ export default function Card ({id,title,description,createdAt,isPending,handleCa
       await axios.post('/api/home/', {id:id})
       handleCardDelete()
     }catch(error){
-      console.log(Error)
+      console.log(error)
     }
 
     

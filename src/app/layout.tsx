@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
-import { ClerkProvider } from '@clerk/nextjs'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import Navbar from '../components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
 
@@ -18,7 +19,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
     <html lang="en">
       <body className={inter.className}>
         <div className='bg-gradient-to-b overflow-hidden from-blue-400 to-blue-200 bg min-h-screen'>
@@ -27,9 +27,8 @@ export default function RootLayout({
 
         </div>
         <Footer/>
-        
+        <ToastContainer />
         </body>
     </html>
-    </ClerkProvider>
   )
 }

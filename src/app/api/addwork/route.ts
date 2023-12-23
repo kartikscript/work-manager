@@ -1,6 +1,6 @@
 import { connect } from "@/dbConfig/dbConfig";
 import { NextRequest, NextResponse } from "next/server";
-import Task from "../../../../models/userModel";
+import Task from "../../../models/taskModel";
 
 type obj = {
   title: String;

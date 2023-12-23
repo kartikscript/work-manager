@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const userSchema=new mongoose.Schema({
+const taskSchema=new mongoose.Schema({
    
     title:{
       type:String,
@@ -13,15 +13,19 @@ const userSchema=new mongoose.Schema({
     }, 
    createdAt:{
     type:Date,
-
+    default:Date.now()
    },
    isPending:{
     type:Boolean,
     default:true
    },
+   userId:{
+    type:mongoose.Types.ObjectId,
+    required:true
+   }
    
 })
 
-const Task= mongoose.models.tasks || mongoose.model('tasks',userSchema)
+const Task= mongoose.models.tasks || mongoose.model('tasks',taskSchema)
 
 export default Task;
